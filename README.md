@@ -17,4 +17,4 @@ $ npm run start
 
 ### Troubleshooting
 
-While building I came across inconsistent [Konva behaviour with the **Brave** browser](https://github.com/konvajs/konva/issues/1132#issuecomment-1273565082).
+While building I came across inconsistent [Konva behaviour with the **Brave** browser](https://github.com/konvajs/konva/issues/1132).
