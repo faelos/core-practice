@@ -1,4 +1,4 @@
-# Core practice technical test
+# Core Practice technical test
 
 ## Development choices
 The brief looked to indicate a preference for vanilla Javascript. The required functionality aligned well with the [Konva](https://konvajs.org/) canvas library.
