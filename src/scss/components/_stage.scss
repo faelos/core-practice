@@ -1,0 +1,47 @@
+.c-stage {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #ccc, #ffffff);
+
+  &.is-erasing {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+  }
+
+  &.is-drawing {
+    cursor: var(--pencil-cursor-url, default), auto;
+  }
+
+  &.is-pannable {
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+
+.c-stage__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-stage__editable-textarea {
+  position: absolute;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.2;
+  transform-origin: center;
+  box-sizing: border-box;
+}

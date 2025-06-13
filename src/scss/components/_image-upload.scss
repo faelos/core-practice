@@ -1,0 +1,9 @@
+.c-image-upload__dropzone {
+  cursor: pointer;
+  border-style: dashed !important;
+
+  &.is-dragging,
+  &:hover {
+    background-color: lighten($primary, 40%);
+  }
+}

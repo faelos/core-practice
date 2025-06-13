@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X-Ray Diagnostic Tool</title>
+  </head>
+  <body>
+    <div class="container-fluid py-4 px-3">
+      
+      <div class="c-image-upload mb-3">
+        <img src="img/logo-core-practice@2x.png" width="226" alt="Core practice" />
+        <h1 class="h5 mt-5 mb-2">Upload your x-ray:</h1>
+        <div class="c-image-upload__dropzone rounded border border-primary p-5 text-center">
+          Drag and drop an image or click to select
+        </div>
+        <div class="c-image-upload__error alert alert-danger d-none mt-2"></div>
+        <input
+          type="file"
+          id="image-upload"
+          name="file"
+          class="c-image-upload__file d-none"
+          accept="image/jpeg,image/png,image/webp"
+        />
+      </div>
+
+      <div class="c-stage d-none">
+
+        <div class="c-toolbar">
+          <button class="c-toolbar__stroke btn btn-outline-primary active" type="button">
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+
+          <label for="stroke-color" class="visually-hidden">Stroke Colour</label>
+          <input class="c-toolbar__stroke-color form-control form-control-color mx-2" type="color" id="stroke-color" value="#FF0000" title="Stroke colour">
+
+          <div class="btn-group" role="group" aria-label="stroke width selection">
+            <input type="radio" class="btn-check" name="stroke-radio" id="stroke-radio-1" autocomplete="off" value="thin">
+            <label class="c-toolbar__stroke-thin btn btn-light" for="stroke-radio-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.0352 35.2584 99.9824 29.5112">
+                <path d="M 10, 52 C 30,35 70,35 95,55" 
+                      fill="none" 
+                      stroke="black" 
+                      stroke-width="3"
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+              </svg>
+            </label>
+          
+            <input type="radio" class="btn-check" name="stroke-radio" id="stroke-radio-2" autocomplete="off" value="medium" checked>
+            <label class="c-toolbar__stroke-medium btn btn-light" for="stroke-radio-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.0352 35.2584 99.9824 29.5112">
+                <path d="M 10, 52 C 30,35 70,35 95,55" 
+                      fill="none" 
+                      stroke="black" 
+                      stroke-width="7"
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+              </svg>
+            </label>
+          
+            <input type="radio" class="btn-check" name="stroke-radio" id="stroke-radio-3" autocomplete="off" value="thick">
+            <label class="c-toolbar__stroke-thick btn btn-light" for="stroke-radio-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.0352 35.2584 99.9824 29.5112">
+                <path d="M 10, 52 C 30,35 70,35 95,55" 
+                      fill="none" 
+                      stroke="black" 
+                      stroke-width="10"
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+              </svg>
+            </label>
+          </div>
+
+          <button class="c-toolbar__eraser btn btn-outline-primary mx-2" type="button">
+            <i class="bi bi-eraser-fill"></i>
+          </button>
+
+          <button class="c-toolbar__font btn btn-outline-primary ms-5" type="button">
+            <i class="bi bi-type"></i>
+          </button>
+          <label for="font-color" class="visually-hidden">Font Colour</label>
+          <input class="c-toolbar__font-color form-control form-control-color mx-2" type="color" id="font-color" value="#000000" title="Font colour">
+
+          <input type="range" class="c-toolbar__font-range form-range mt-2 me-2" min="14" max="72" value="20" id="font-size">
+          <input class="c-toolbar__font-size" type="number" id="age-input" min="14" max="72" value="20" />
+
+          <div class="d-flex ms-auto">
+
+            <div class="c-toolbar__toggle-annotations mx-4">
+              <div class="btn-group" role="group" aria-label="stroke width selection">
+                <label class="input-group-text" for="inputGroupSelect01">Annotations</label>
+                <input type="radio" class="btn-check" name="annotations-radio" id="annotations-radio-1" autocomplete="off" checked value="on">
+                <label class="btn btn-light" for="annotations-radio-1">
+                  <i class="c-toolbar__toggle-annotations-on bi bi-eye-fill"></i>
+                </label>
+              
+                <input type="radio" class="btn-check" name="annotations-radio" id="annotations-radio-2" autocomplete="off" value="off">
+                <label class="btn btn-light" for="annotations-radio-2">
+                  <i class="c-toolbar__toggle-annotations-off bi bi-eye-slash-fill"></i>
+                </label>
+              </div>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="c-toolbar__zoom-out btn btn-primary" disabled type="button">
+                <i class="bi bi-zoom-out"></i>
+              </button>
+              <button class="c-toolbar__zoom-in btn btn-primary" type="button">
+                <i class="bi bi-zoom-in"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="c-stage__canvas is-drawing">
+          <!-- canvas is rendered here -->
+        </div>
+      </div>
+
+
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
