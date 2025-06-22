@@ -7,6 +7,7 @@ import PubSub from 'pubsub-js' // PubSub available across modules
 //import { Popover } from 'bootstrap'
 
 import './components/image-upload'
+import './components/loader-anim'
 import './components/toolbar-font'
 import './components/toolbar-stroke'
 import './components/toolbar-eraser'
