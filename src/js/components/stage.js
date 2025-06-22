@@ -287,6 +287,10 @@ function createText() {
     draggable: true,
     padding: 10,
     align: 'center',
+    shadowColor: 'black',
+    shadowBlur: 0,
+    shadowOffset: { x: 0.4, y: 0.4 },
+    shadowOpacity: 0.6,
   })
 
   // center
