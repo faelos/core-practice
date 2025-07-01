@@ -7,10 +7,10 @@
 }
 
 .c-loader__tooth {
-  background-image: url('../../img/logo.png');
+  background-image: url(/img/logo.png);
   background-size: contain;
   aspect-ratio: 344/360;
-  mask-image: url(../../img/logo.png);
+  mask-image: url(/img/logo.png);
   mask-size: contain;
   background-repeat: no-repeat;
 }
